@@ -1,0 +1,27 @@
+User Input: I'm looking for a cheap pizza place near me
+Thought: The user wants a pizza place, and price is cheap. I need to make a function call to find a resturant.
+Action: search_restaurants
+Action Input: {"cuisine": "pizza", "price_range": "cheap", "location": "near me"}
+Observation:  [{"name": "Pizza Hut", "address": "123 Main St", "rating": 4.0, "description": "A popular pizza chain offering a variety of toppings."}]
+Final Answer: I found one cheap pizza resturant called Pizza Hut, located at 123 Main St with rating 4.0, they serve a variety of pizza toppings
+
+User Input: I want a fancy steakhouse for a business dinner
+Thought: The user is looking for a fancy restaurant and has business dinner. I will use a resturant search tool.
+Action: search_restaurants
+Action Input: {"cuisine": "steakhouse", "price_range": "expensive", "location": "near me"}
+Observation: [{"name": "The Capital Grille", "address": "456 High Ave", "rating": 4.5, "description": "Upscale steakhouse offering aged cuts of beef."}]
+Final Answer: The Capital Grille is a fancy steakhouse located at 456 High Ave, with a rating of 4.5. This is an upscale steakhouse offering aged cuts of beef.
+
+User Input: I didn't really like the first option can you find another resturant with more reviews
+Thought: The user wants to find a resturant with more reviews, I should use the search tool again with order by reviews.
+Action: search_restaurants
+Action Input: {"cuisine": "steakhouse", "price_range": "expensive", "location": "near me", "order_by": "review_count"}
+Observation:  [{"name": "Smith & Wollensky", "address": "789 Oak St", "rating": 4.6, "description": "A classic American steakhouse with a great wine list."}]
+Final Answer: I found Smith & Wollensky which is a steakhouse located at 789 Oak St with a rating of 4.6 and has a large number of reviews. Its a classic American steakhouse with a great wine list
+
+User Input: Can you find a cafe with good coffee near me?
+Thought: The user wants a cafe with coffee, I need to use a function call to search resturants
+Action: search_restaurants
+Action Input: {"cuisine": "cafe", "feature": "good coffee", "location": "near me"}
+Observation: [{"name": "Brew & Bean", "address": "999 Pine st", "rating": 4.2, "description": "Local cafe, serves delicious coffee."}]
+Final Answer: Brew & Bean is a local cafe located at 999 Pine st with a rating of 4.2 and has great coffee.
