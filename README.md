@@ -70,14 +70,14 @@ This chatbot is designed to help users find restaurants based on their specific 
 
 ### Configuration
 
-1.  **Create a `.env` file** in the root directory of the project.
+1.  **Create a `.env` file** in the project's root directory.
 2.  **Add your API keys** to the `.env` file:
 
     ```env
     OPENAI_API_KEY=your_openai_api_key
     YELP_API_KEY=your_yelp_api_key # Or GOOGLE_PLACES_API_KEY=your_google_places_api_key
     ```
-    **Note:** If using Google Places API, you will also need to update the `api_utils.py` and other required files.
+    **Note:** If using Google Places API, you must update the `api_utils.py` and other required files.
 
 ### Running the Application
 
@@ -104,11 +104,26 @@ This chatbot is designed to help users find restaurants based on their specific 
 *   "I'm looking for a cheap pizza place in Greater Noida."
 *   "I want a fancy steakhouse for a business dinner in Hyderabad."
 *  "Can you find a cafe with good coffee near India Gate?"
-* "Can you find a indian resturant that is cheap?"
+* "Can you find an Indian restaurant that is cheap?"
 
 ## Project Structure
-
-
+```
+restaurant_chatbot/
+    ├── app.py           # Flask application logic
+    ├── templates/       # HTML templates
+    │   └── index.html
+    ├── static/          # CSS, JS, etc. (optional)
+    ├── utils/          # Utility functions
+    │    ├── llm_utils.py   # LLM interaction, prompt construction
+    │    └── api_utils.py  # API calls (Yelp, etc)
+    ├── prompts/       # Prompt templates
+    │     ├── base_prompt.txt
+    │     └── few_shot_examples.txt
+    ├── config.py     # Configuration
+    └── requirements.txt
+```
 ## Screenshots
+![static/images/Screenshot 2025-02-02 161040.png](https://github.com/govindbanura/Restaurant-Recommendation-Chatbot/blob/main/static/images/Screenshot%202025-02-02%20161040.png)
+
 
 
